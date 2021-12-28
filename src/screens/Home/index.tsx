@@ -56,8 +56,7 @@ export function Home() {
     
       <CategorySelect 
         categorySelected={category}
-        setCategory={handleCategorySelect}
-      />
+        setCategory={handleCategorySelect} />
 
       <View style={styles.content}>
         <ListHeader title="Partidas agendadas" subtitle="Total 6" />

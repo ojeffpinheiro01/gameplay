@@ -10,9 +10,10 @@ import { styles } from './styles';
 type CategorySelectProps = {
   categorySelected: string;
   setCategory: (categoryId: string) => void;
+  hasCheckBox?: boolean;
 }
 
-export function CategorySelect({ categorySelected, setCategory }: CategorySelectProps) {
+export function CategorySelect({ categorySelected, setCategory, hasCheckBox = false }: CategorySelectProps) {
   return (
     <ScrollView style={styles.container} horizontal
       showsHorizontalScrollIndicator={false}
@@ -21,6 +22,7 @@ export function CategorySelect({ categorySelected, setCategory }: CategorySelect
           <Category key={c.id} 
             title={c.title}
             icon={c.icon}
+            hasCheckBox={hasCheckBox}
             checked={c.id === categorySelected}
             onPress={() => setCategory(c.id) } />
         ) ) }
