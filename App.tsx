@@ -6,6 +6,8 @@ import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 import { Roboto_500Medium, Roboto_700Bold } from '@expo-google-fonts/roboto';
 
 import { SignIn } from './src/screens/SignIn';
+import { Home } from './src/screens/Home';
+
 import { Background } from './src/components/Background';
 
 export default function App() {
@@ -26,7 +28,7 @@ export default function App() {
         barStyle='light-content'
         backgroundColor='transparent'
         translucent />
-      <SignIn />
+      <Home />
     </Background>
   );
 }
