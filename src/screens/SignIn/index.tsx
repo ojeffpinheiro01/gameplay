@@ -10,8 +10,14 @@ import { ButtonIcon } from '../../components/ButtonIcon';
 import illustrationImg from '../../assets/illustration.png'
 
 import { styles } from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 export function SignIn() {
+  const navigation = useNavigation()
+
+  function handleSignIn() {
+    navigation.navigate('Home')
+  }
   return (
     <View style={styles.container}>
         <Image source={illustrationImg} />
@@ -26,7 +32,8 @@ export function SignIn() {
           Crie grupos para jogar seus games {'\n'}
           favoritos com seus amigos
         </Text>
-        <ButtonIcon title='ENTRAR COM O DISCORD' activeOpacity={0.7} />
+        <ButtonIcon title='ENTRAR COM O DISCORD' 
+          onPress={handleSignIn} />
       </View>
     </View>
   );
