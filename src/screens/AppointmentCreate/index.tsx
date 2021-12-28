@@ -10,6 +10,7 @@ import { CategorySelect } from '../../components/CategorySelect';
 import { GuildIcon } from '../../components/GuildIcon';
 import { SmallInput } from '../../components/SmallInput';
 import { TextArea } from '../../components/TextArea';
+import { Button } from '../../components/Button';
 
 import { styles } from "./styles";
 import { theme } from '../../global/styles/theme';
@@ -80,7 +81,7 @@ export function AppointmentCreate() {
               maxLength={100} numberOfLines={5} />
 
             <View style={styles.footer}>
-              
+              <Button title="Agendar" />
             </View>
           </View>
         </ScrollView>
