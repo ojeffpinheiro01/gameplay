@@ -5,7 +5,7 @@ import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 
 import { Routes } from './src/routes';
-import { Background } from './src/components/Background';
+import { StatusBar } from 'react-native';
 
 
 const fetchFonts = () => {
@@ -30,8 +30,12 @@ export default function App() {
   }
 
   return (
-      <Background>
+      <>
+        <StatusBar
+          barStyle='light-content'
+          backgroundColor='transparent'
+          translucent />
         <Routes />
-      </Background>
+      </>
   );
 }
