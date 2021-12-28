@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { StatusBar } from 'react-native';
 
 import AppLoading from 'expo-app-loading';
 
@@ -31,13 +30,8 @@ export default function App() {
   }
 
   return (
-    <Background>
-      <StatusBar
-        barStyle='light-content'
-        backgroundColor='transparent'
-        translucent />
-      <Routes />
-    </Background>
-
+      <Background>
+        <Routes />
+      </Background>
   );
 }
