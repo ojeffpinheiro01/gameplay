@@ -10,7 +10,8 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 24,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: getStatusBarHeight() +26,
+    marginTop: getStatusBarHeight() + 26,
+    marginBottom: 42
   },
   content: {
     marginTop: 42
