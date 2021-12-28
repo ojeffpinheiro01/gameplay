@@ -7,6 +7,7 @@ import { Appointment } from '../../components/Appointment';
 import { ListHeader } from '../../components/ListHeader';
 import { ButtonAdd } from '../../components/ButtonAdd';
 import { Profile } from '../../components/Profile';
+import { ListDivider } from '../../components/ListDivider';
 
 import { styles } from './styles';
 
@@ -67,6 +68,7 @@ export function Home() {
             renderItem={({ item }) => (
             <Appointment data={item} />            
           )}
+          ItemSeparatorComponent={() => <ListDivider /> }
           style={styles.matches}
           showsVerticalScrollIndicator={false}
         />
