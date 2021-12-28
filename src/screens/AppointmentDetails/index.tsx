@@ -8,13 +8,12 @@ import { Background } from '../../components/Background';
 import { Header } from '../../components/Header';
 import { ListHeader } from '../../components/ListHeader';
 import { ListDivider } from '../../components/ListDivider';
+import { Member } from '../../components/Member';
 
 import BannerImg from '../../assets/banner.png';
 
 import { styles } from "./styles";
 import { theme } from '../../global/styles/theme';
-
-
 
 
 export function AppointmentDetails() {
@@ -53,7 +52,7 @@ export function AppointmentDetails() {
       <FlatList data={members}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
-          <Text>{item.username}</Text>
+          <Member data={item} />
         )}
         ItemSeparatorComponent={() => <ListDivider />}
         style={styles.members} />

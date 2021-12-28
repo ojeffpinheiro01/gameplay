@@ -19,7 +19,7 @@ export type GuildProps = {
   owner: boolean;
 }
 
-export type AppointmentProps = {
+export type Appointment = {
   id: string;
   guild: GuildProps;
   category: string;
@@ -27,12 +27,12 @@ export type AppointmentProps = {
   description: string;
 }
 
-type Props = RectButtonProps & {
-  data: AppointmentProps;
+type AppointmentProps = RectButtonProps & {
+  data: Appointment;
 }
 
 
-export function Appointment({ data, ...rest }: Props) {
+export function Appointment({ data, ...rest }: AppointmentProps) {
   const [category] = categories.filter(item => item.id === data.category);
   const { owner } = data.guild;
   const { primary, on } = theme.colors;
