@@ -9,6 +9,7 @@ import { Header } from '../../components/Header';
 import { ListHeader } from '../../components/ListHeader';
 import { ListDivider } from '../../components/ListDivider';
 import { Member } from '../../components/Member';
+import { ButtonIcon } from '../../components/ButtonIcon';
 
 import BannerImg from '../../assets/banner.png';
 
@@ -56,6 +57,10 @@ export function AppointmentDetails() {
         )}
         ItemSeparatorComponent={() => <ListDivider />}
         style={styles.members} />
+
+      <View style={styles.footer}>
+        <ButtonIcon title="Entrar na partida" />
+      </View>
     </Background>
   )
 }
