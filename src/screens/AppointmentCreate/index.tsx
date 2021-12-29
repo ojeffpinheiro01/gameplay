@@ -4,7 +4,6 @@ import { RectButton } from 'react-native-gesture-handler';
 
 import { Feather } from '@expo/vector-icons';
 
-import { Background } from '../../components/Background';
 import { Header } from '../../components/Header';
 import { CategorySelect } from '../../components/CategorySelect';
 import { GuildIcon } from '../../components/GuildIcon';
