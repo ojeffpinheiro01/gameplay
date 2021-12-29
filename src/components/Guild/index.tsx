@@ -8,18 +8,18 @@ import { GuildIcon } from '../GuildIcon';
 import { styles } from './styles';
 import { theme } from '../../global/styles/theme';
 
-export type Guild = {
+export type GuildProps = {
   id: string;
   name: string;
   icon: string | null;
   owner: boolean;
 }
 
-type GuildProps = TouchableOpacityProps & {
-  data: Guild;
+type Props = TouchableOpacityProps & {
+  data: GuildProps;
 }
 
-export function Guild({ data, ...rest }: GuildProps) {
+export function Guild({ data, ...rest }: Props) {
   return (
     <TouchableOpacity style={styles.container}
       activeOpacity={0.7} {...rest} >

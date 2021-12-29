@@ -6,19 +6,19 @@ import { Avatar } from '../../components/Avatar'
 import { styles } from './styles'
 import { theme } from '../../global/styles/theme'
 
-export type Member = {
+export type MemberProps = {
   id: string;
   username: string;
   avatar_url: string;
   status: string;
 }
 
-type MemberProps = {
-  data: Member;
+type Props = {
+  data: MemberProps;
 }
 
 
-export function Member({ data }: MemberProps) {
+export function Member({ data }: Props) {
   const { on, primary } = theme.colors;
   const isOnline = data.status === 'online';
 

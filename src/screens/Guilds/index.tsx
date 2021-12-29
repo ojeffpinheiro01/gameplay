@@ -2,8 +2,7 @@ import React from 'react'
 import { FlatList, Text, TouchableOpacityProps, View } from "react-native";
 
 import { ListDivider } from '../../components/ListDivider';
-import { Guild } from '../../components/Guild';
-import { GuildProps } from 'components/Guild';
+import { Guild, GuildProps } from '../../components/Guild';
 import { styles } from "./styles";
 
 
@@ -24,7 +23,40 @@ export function Guilds({ handleGuildSelect }: GuildsProps){
       name: 'Galera do Game',
       icon: 'image.png',
       owner: true
-    }
+    },{
+      id: '3',
+      name: 'Lendários',
+      icon: 'image.png',
+      owner: true
+    },
+    {
+      id: '4',
+      name: 'Galera do Game',
+      icon: 'image.png',
+      owner: true
+    },{
+      id: '5',
+      name: 'Lendários',
+      icon: 'image.png',
+      owner: true
+    },
+    {
+      id: '6',
+      name: 'Galera do Game',
+      icon: 'image.png',
+      owner: true
+    },{
+      id: '7',
+      name: 'Lendários',
+      icon: 'image.png',
+      owner: true
+    },
+    {
+      id: '8',
+      name: 'Galera do Game',
+      icon: 'image.png',
+      owner: true
+    },
   ];
 
   return(
@@ -38,8 +70,9 @@ export function Guilds({ handleGuildSelect }: GuildsProps){
         />
         )}
         showsVerticalScrollIndicator={false}
-        ItemSeparatorComponent={() => <ListDivider />}
-        contentContainerStyle={{ paddingBottom: 68, paddingTop: 103 }}
+        ItemSeparatorComponent={() => <ListDivider isCentered />}
+        ListHeaderComponent={() => <ListDivider isCentered />}
+        contentContainerStyle={{ paddingBottom: 128, paddingTop: 103 }}
         style={styles.guilds} />
     </View>
   )
