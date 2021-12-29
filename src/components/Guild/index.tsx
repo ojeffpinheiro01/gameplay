@@ -22,16 +22,19 @@ type GuildProps = TouchableOpacityProps & {
 export function Guild({ data, ...rest }: GuildProps) {
   return (
     <TouchableOpacity style={styles.container}
-    activeOpacity={0.7} {...rest}>
+      activeOpacity={0.7} {...rest} >
+
       <GuildIcon />
       <View style={styles.content}>
         <View>
           <Text style={styles.title}>{data.name}</Text>
-          <Text style={styles.type}>{ data.owner ? 'Administrador' : 'Convidado'}</Text>
+          <Text style={styles.type}>
+            {data.owner ? 'Administrador' : 'Convidado'}
+          </Text>
         </View>
-
-        <Feather name="chevron-right" color={theme.colors.heading} size={24}/>
       </View>
+
+      <Feather name="chevron-right" color={theme.colors.heading} size={24} />
     </TouchableOpacity>
   )
 }
