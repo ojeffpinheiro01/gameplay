@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
+import { StatusBar } from 'react-native';
 
 import AppLoading from 'expo-app-loading';
 
 import * as Font from 'expo-font';
 
 import { Routes } from './src/routes';
-import { StatusBar } from 'react-native';
+import { Background } from './src/components/Background';
+import { AuthProvider } from 'hooks/auth';
 
 
 const fetchFonts = () => {
@@ -30,12 +32,14 @@ export default function App() {
   }
 
   return (
-      <>
-        <StatusBar
-          barStyle='light-content'
-          backgroundColor='transparent'
-          translucent />
+    <Background>
+      <StatusBar
+        barStyle='light-content'
+        backgroundColor='transparent'
+        translucent />
+      <AuthProvider>
         <Routes />
-      </>
+      </AuthProvider>
+    </Background>
   );
 }
