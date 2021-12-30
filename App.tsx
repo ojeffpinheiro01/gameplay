@@ -7,7 +7,7 @@ import * as Font from 'expo-font';
 
 import { Routes } from './src/routes';
 import { Background } from './src/components/Background';
-import { AuthProvider } from 'hooks/auth';
+import { AuthProvider } from './src/hooks/auth';
 
 
 const fetchFonts = () => {

@@ -1,6 +1,5 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { View, Text, Image, Alert } from 'react-native';
 
 import { useAuth } from '../../hooks/auth';
 
@@ -12,11 +11,14 @@ import illustrationImg from '../../assets/illustration.png'
 import { styles } from './styles';
 
 export function SignIn() {
-  const navigation = useNavigation();
-  const { user } = useAuth()
+  const { user, signIn } = useAuth()
 
-  function handleSignIn() {
-    navigation.navigate('Home');
+  async function handleSignIn() {
+    try {
+      signIn();
+    } catch (error) {
+      Alert.alert(error);
+    }
   }
 
   return (
